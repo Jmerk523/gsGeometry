@@ -63,10 +63,13 @@
     <Compile Include="mesh_ops\MeshAutoRepair.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\geometry3Sharp\geometry3Sharp.csproj">
-      <Project>{0C518DDA-28FE-44CA-9AB0-F9773974F13A}</Project>
-      <Name>geometry3Sharp</Name>
-    </ProjectReference>
+    <!-- <ProjectReference Include="..\geometry3Sharp\geometry3Sharp.csproj"> -->
+      <!-- <Project>{0C518DDA-28FE-44CA-9AB0-F9773974F13A}</Project> -->
+      <!-- <Name>geometry3Sharp</Name> -->
+    <!-- </ProjectReference> -->
+    <PackageReference Include="geometry3Sharp">
+      <Version>1.0.289</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
