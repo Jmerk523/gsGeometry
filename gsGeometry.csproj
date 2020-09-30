@@ -33,9 +33,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="functions\FalloffFunctions.cs" />
-    <Compile Include="implicit\CachingGridImplicit3d.cs" />
-    <Compile Include="implicit\CachingMeshSDF.cs" />
+    <None Include="functions\FalloffFunctions.cs" />
+    <None Include="implicit\CachingGridImplicit3d.cs" />
+    <None Include="implicit\CachingMeshSDF.cs" />
     <Compile Include="mesh_analysis\MeshTopology.cs" />
     <Compile Include="mesh_ops\AutoHoleFill.cs" />
     <Compile Include="mesh_ops\MarchingCubesPro.cs" />
@@ -55,8 +55,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="mesh_ops\MergeCoincidentEdges.cs" />
     <Compile Include="spatial\DMeshAABBTreePro.cs" />
-    <Compile Include="spatial\EditMeshSpatial.cs" />
-    <Compile Include="spatial\MeshScalarSamplingGrid.cs" />
+    <None Include="spatial\EditMeshSpatial.cs" />
+    <None Include="spatial\MeshScalarSamplingGrid.cs" />
     <Compile Include="spatial\MeshWindingNumberGrid.cs" />
     <Compile Include="spatial\PointSetHashtable.cs" />
     <Compile Include="mesh_ops\MeshRepairOrientation.cs" />
@@ -64,11 +64,15 @@
   </ItemGroup>
   <ItemGroup>
     <!-- <ProjectReference Include="..\geometry3Sharp\geometry3Sharp.csproj"> -->
-      <!-- <Project>{0C518DDA-28FE-44CA-9AB0-F9773974F13A}</Project> -->
-      <!-- <Name>geometry3Sharp</Name> -->
+    <!-- <Project>{0C518DDA-28FE-44CA-9AB0-F9773974F13A}</Project> -->
+    <!-- <Name>geometry3Sharp</Name> -->
     <!-- </ProjectReference> -->
-    <PackageReference Include="geometry3Sharp">
-      <Version>1.0.289</Version>
+    <ProjectReference Include="..\geometry3Sharp\geometry3Sharp.csproj">
+      <Project>{0c518dda-28fe-44ca-9ab0-f9773974f13a}</Project>
+      <Name>geometry3Sharp</Name>
+    </ProjectReference>
+    <PackageReference Include="UnityEngine">
+      <Version>2.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
